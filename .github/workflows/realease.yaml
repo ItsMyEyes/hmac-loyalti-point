@@ -23,10 +23,10 @@ jobs:
         id: go
 
       - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@master
+        uses: goreleaser/goreleaser-action@v5
         with:
           version: latest
           args: release --rm-dist
           workdir: ./cmd/hmac-loyalti
         env:
-          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
