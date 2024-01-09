@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/urfave/cli"
-	"gitlab.iat.id/kiyora/hmac-loyalti/cmd/cli/models"
+	"gitlab.iat.id/kiyora/hmac-loyalti/cmd/hmac-loyalti/models"
 	"gitlab.iat.id/kiyora/hmac-loyalti/pkg"
 )
 

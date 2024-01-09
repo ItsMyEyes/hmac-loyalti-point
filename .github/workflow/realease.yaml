@@ -16,10 +16,10 @@ jobs:
         with:
           fetch-depth: 0 # See: https://goreleaser.com/ci/actions/
 
-      - name: Set up Go 1.19
+      - name: Set up Go 1.21
         uses: actions/setup-go@v3
         with:
-          go-version: 1.19
+          go-version: 1.21
         id: go
 
       - name: Run GoReleaser
@@ -27,6 +27,6 @@ jobs:
         with:
           version: latest
           args: release --rm-dist
-          workdir: ./cmd/ikiyora
+          workdir: ./cmd/hmac-loyalti
         env:
           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
