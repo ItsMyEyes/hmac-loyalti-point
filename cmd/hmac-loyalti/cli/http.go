@@ -95,6 +95,7 @@ func hmac(w http.ResponseWriter, req *http.Request) {
 	}
 
 	res.Hmac = hmac
+	res.Status = true
 	w.WriteHeader(http.StatusOK)
 	marshal, _ := json.Marshal(res)
 	w.Write(marshal)
