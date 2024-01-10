@@ -9,8 +9,6 @@ jobs:
   build:
     name: GoReleaser build
     runs-on: ubuntu-latest
-    env:
-      - CGO_ENABLED=0
 
     steps:
       - name: Checkout
@@ -33,3 +31,4 @@ jobs:
           workdir: ./cmd/hmac-loyalti
         env:
           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+          CGO_ENABLED: 0
