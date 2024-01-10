@@ -55,6 +55,9 @@ func hmac(w http.ResponseWriter, req *http.Request) {
 	defer req.Body.Close()
 	b, _ := io.ReadAll(req.Body)
 	fmt.Println(string(b))
+	if len(b) == 0 {
+		b = []byte("{nothingHereBrooo}")
+	}
 
 	w.Header().Set("Content-Type", "application/json")
 	method := req.Header.Get("X-Method")
